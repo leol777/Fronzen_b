@@ -13,14 +13,15 @@
         android:gravity="center"
         android:textSize="20dp"
         android:textStyle="bold"
-        android:text="当前温度" />
-    <TextView
+        android:text="温度要求" />
+    <EditText
+        android:id="@+id/edit_text1"
         android:layout_width="200dp"
         android:layout_height="64dp"
         android:layout_gravity="center"
         android:gravity="center"
         android:textSize="18dp"
-        android:text="xxx℃" />
+        android:hint="请输入温度要求" />
     <TextView
         android:layout_width="200dp"
         android:layout_height="64dp"
@@ -29,15 +30,16 @@
         android:gravity="center"
         android:textSize="20dp"
         android:textStyle="bold"
-        android:text="当前位置"/>
+        android:text="位置要求"/>
 
-    <TextView
+    <EditText
+        android:id="@+id/edit_text2"
         android:layout_width="200dp"
         android:layout_height="64dp"
         android:layout_gravity="center"
         android:gravity="center"
         android:textSize="18dp"
-        android:text="经度xxx，纬度xxx" />
+        android:hint="请输入位置要求" />
     <TextView
         android:layout_width="200dp"
         android:layout_height="64dp"
@@ -45,8 +47,6 @@
         android:gravity="center"
         android:layout_weight="1"
         android:text="" />
-
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -60,14 +60,13 @@
             android:gravity="center"
             android:layout_weight="2"
             android:text="" />
-
         <Button
-            android:id="@+id/button1"
+            android:id="@+id/button3"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            android:layout_weight="54"
-            android:text="标记"
+            android:layout_weight="80"
+            android:text="保存当前改动"
             />
         <TextView
             android:layout_width="wrap_content"
@@ -76,22 +75,7 @@
             android:gravity="center"
             android:layout_weight="2"
             android:text="" />
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:layout_weight="54"
-            android:text="修改合约要求"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:layout_weight="2"
-            android:text="" />
-
     </LinearLayout>
+
 </LinearLayout>
 
