@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Fronzen_b</string>
+    <string name="start_monitor">Start Monitor</string>
+    <string name="end_monitor">End Monitor</string>
+    <string name="mark_contract">Mark Current Status</string>
+    <string name="mark_complete">Contract status has been marked!</string>
+    <string name="modify_temperature">Modify Temperature</string>
+    <string name="temp_unavailable">Temperature Unavailable</string>
 </resources>

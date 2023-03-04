@@ -1,5 +1,7 @@
 package liang.leo.fronzen_b.BlockChainModel;
 
+import androidx.lifecycle.MutableLiveData;
+
 import java.util.concurrent.SynchronousQueue;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
@@ -28,9 +30,9 @@ public class Monitor {
         return instance;
     }
 
-    public void startMonitoring(){
+    public void startMonitoring(MutableLiveData<Integer> data){
         monitoring = true;
-        createMonitorTask();
+        createMonitorTask(data);
         thread.start();
         monitorStartTime = System.currentTimeMillis();
     }
@@ -44,10 +46,14 @@ public class Monitor {
         System.out.println("Monitoring time:" + Formatter.getTime(monitorTime));
     }
 
-    private void createMonitorTask(){
+    private void createMonitorTask(MutableLiveData<Integer> data){
         monitorTask = () -> {
             while (monitoring){
-                System.out.println(TempContract.getTemp() + " ℃");
+                try {
+                    data.postValue(ContractTest.getName());
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
                 try {
                     Thread.sleep(10000);
                 } catch (InterruptedException ignored) {

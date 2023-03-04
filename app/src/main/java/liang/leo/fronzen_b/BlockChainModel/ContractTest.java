@@ -24,10 +24,6 @@ import java.util.List;
 import static java.lang.Integer.parseInt;
 
 public class ContractTest {
-    public static void main(String[] args) throws Exception {
-        getName();
-    }
-
     public static String node = "https://goerli.infura.io/v3/204f40729eb14b1aa089e13b5270e421";
     static Web3j web3j = Web3j.build(new HttpService(node));
     static Credentials credentials = Credentials.create("55e1f43304a4f499254403e2b87e257f8a6e714d1b399d8644036a48ca36254c");
