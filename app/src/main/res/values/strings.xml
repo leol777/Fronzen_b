@@ -6,4 +6,7 @@
     <string name="mark_complete">Contract status has been marked!</string>
     <string name="modify_temperature">Modify Temperature</string>
     <string name="temp_unavailable">Temperature Unavailable</string>
+    <string name="current_temperature">Current Temperature</string>
+    <string name="xxx">xxx</string>
+    <string name="current_location">Current Location</string>
 </resources>
